@@ -12,11 +12,14 @@ $.ajax({
           var th1 = document.createElement('th');
           var th2 = document.createElement('th');
           var th3 = document.createElement('th');
+          var a = document.createElement('a');
           var text = document.createTextNode(data.feed[i].title);
           var text1 = document.createTextNode(data.feed[i].link);
           var text2 = document.createTextNode(data.feed[i].published);
+          a.setAttribute('href', text1);
+          a.appendChild(text1);
           th1.appendChild(text);
-          th2.appendChild(text1);
+          th2.appendChild(a);
           th3.appendChild(text2);
           tr.appendChild(th1);
           tr.appendChild(th2);
